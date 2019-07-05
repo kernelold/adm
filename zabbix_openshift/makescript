@@ -1,0 +1,4 @@
+ mkdir -p /tmp/BUILD ; cd  /tmp/BUILD ; wget http://downloads.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/2.4.6/zabbix-2.4.6.tar.gz ; tar xf zabbix-2.4.6.tar.gz ; cd zabbix-2.4.6 ; >  mkdir /var/lib/openshift/$OPENSHIFT_APP_UUID/app-root/data/zabbix
+./configure --enable-server --enable-java  --with-mysql --with-libcurl --enable-agent --with-ssh2 --prefix=/var/lib/openshift/$OPENSHIFT_APP_UUID/app-root/data/zabbix
+ make
+ make install 
